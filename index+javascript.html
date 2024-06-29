@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>splash water effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        * {margin:0; padding:0; box-sizing:border-box;}
+        body {background:url("images/bg-m.jpg") no-repeat center top/100% 100vh;}
+        section {max-width:900px; margin:auto;border:3px solid gold;}
+        h1 {padding:20px 0; text-align:center; border:2px solid red; font-family: 'Lobster', cursive; font-size:3rem;}
+        img {width:100%; display:block;}
+        img#face {transition:transform 0.5s; margin-top:10vh;}
+        img#face:hover {transform:rotateY(180deg); cursor:pointer; }
+
+        /* 미디어쿼리 */
+        @media(min-width:900px){
+                body {background-image:url("images/bg.jpg"); transition:background-image 1s;}
+                h1 {color:white;}                   
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const $h1 = document.querySelector("h1");
+            $h1.addEventListener("click", function() {
+                this.style.color = "red";
+                this.style.fontSize = "3rem";
+            });
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <h1>splash water effect</h1>
+        <img src="images/face.png" alt="여자얼굴" id="face">
+    </section>
+</body>
+</html>
